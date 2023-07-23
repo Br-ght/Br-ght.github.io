@@ -67,5 +67,6 @@ raid_calculator.addEventListener('submit', function(event){
         }
     }
     console.log("Raid status = " + raid_status())
+    console.log(server_name)
 
 })
