@@ -7,6 +7,10 @@ raid_calculator.addEventListener('submit', function(event){
     let hours = parseInt(document.getElementById('hours').value);
     let minutes = parseInt(document.getElementById('minutes').value);
 
+    let server_name = document.getElementById('server_name').value;
+    var servers = document.getElementById('servers');
+    var li = document.createElement('li');
+
     function convert(){
         if (!(days)){
             days = 0;
@@ -51,22 +55,17 @@ raid_calculator.addEventListener('submit', function(event){
         if (wait_time == 40 && raid_time != 40){
             document.getElementById('remaining_time').textContent = 'Raid now!'
             document.getElementById('raid_at').textContent = `Next raid @ ${time_format()[0]} : ${time_format()[1]} : ${time_format()[2]}`
-
+            li.appendChild(document.createTextNode(`${server_name.toUpperCase()} | Raid @\n${time_format()[0]} : ${time_format()[1]} : ${time_format()[2]}`));
+            servers.appendChild(li);
             return('Raid started.')
         } else{
             document.getElementById('remaining_time').textContent = `${wait_time} minutes until raid.`
             document.getElementById('raid_at').textContent = `Raid @\n${time_format()[0]} : ${time_format()[1]} : ${time_format()[2]}`
+            li.appendChild(document.createTextNode(`${server_name.toUpperCase()} | Raid @\n${time_format()[0]} : ${time_format()[1]} : ${time_format()[2]}`));
+            servers.appendChild(li);
             return('x amount of time until raid.')
         }
-
     }
     console.log("Raid status = " + raid_status())
 
-})
-
-save_server.addEventListener('submit', function(event){
-    event.preventDefault();
-    let server_name = document.getElementById('server_name');
-
-    
 })

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="type-soul.css">
     
-    <title>Index Paaaage</title>
+    <title>Raid Calculator</title>
 </head>
 <div class="primary-header">
     <header>
@@ -16,7 +16,8 @@
     <body>
         <section class="server_list">
             <div class="wrapper">
-                <ul>
+                <h2><u>Saved Servers</u></h2>
+                <ul id="servers">
                     
                 </ul>
             </div>
@@ -27,6 +28,10 @@
                 <h2 id="remaining_time">XX until raid.</h2>
                 <h2 id="raid_at">Raid @ XX : XX : XX</h2>
                 <form class="raid_calculator" id="raid_calculator">
+                    <div class="save_container">
+                        <label for="server_name">SERVER NAME (optional)</label><br>
+                        <input type="text" minlength="7" id="server_name" name="server_name">
+                    </div>
                     <div class="days_container">
                         <label for="days">DAYS</label><br>
                         <input type="number" min="0" id="days" name="days"><br>
@@ -43,17 +48,6 @@
                 </form>
             </div>
         </sction>
-        
-        
-        <section class="save_section">
-            <div class="wrapper">
-                <h2>Save Server?</h2>
-                <form class="save_server" id="save_server">
-                    <input type="text" name="server_name">
-                </form>
-            </div>
-        </section>
-        
 
         <script src="type-soul.js"></script>
         
