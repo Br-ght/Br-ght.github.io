@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="type-soul.css">
+    
+    <title>Index Paaaage</title>
+</head>
+<div class="primary-header">
+    <header>
+        <h1>TYPE://SOUL RAID CALCULATOR</h1>
+    </header>
+</div>
+<div class="body">
+    <body>
+        <section class="server_list">
+            <div class="wrapper">
+                <ul>
+                    
+                </ul>
+            </div>
+        </section>
+        
+        <section class="calculator_section">
+            <div class="wrapper">
+                <h2 id="remaining_time">XX until raid.</h2>
+                <h2 id="raid_at">Raid @ XX : XX : XX</h2>
+                <form class="raid_calculator" id="raid_calculator">
+                    <div class="days_container">
+                        <label for="days">DAYS</label><br>
+                        <input type="number" min="0" id="days" name="days"><br>
+                    </div>
+                    <div class="hours_container">
+                        <label for="days">HOURS</label><br>
+                        <input type="number" min="0" max="12" id="hours" name="hours"><br>
+                    </div>
+                    <div class="minutes_container">
+                        <label for="days">MINUTES</label><br>
+                        <input type="number" min="0" max="60" id="minutes" name="minutes"><br>
+                    </div>
+                    <input type="submit" value="Enter">
+                </form>
+            </div>
+        </sction>
+        
+        
+        <section class="save_section">
+            <div class="wrapper">
+                <h2>Save Server?</h2>
+                <form class="save_server" id="save_server">
+                    <input type="text" name="server_name">
+                </form>
+            </div>
+        </section>
+        
+
+        <script src="type-soul.js"></script>
+        
+    </body>
+</div>
+</html>
+
