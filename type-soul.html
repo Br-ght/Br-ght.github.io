@@ -13,7 +13,24 @@
     </header>
 </div>
 <div class="body">
-    <body>
+    <body onload="onLoad()">
+        <section class="raids_section">
+            <div class="wrapper">
+                <h2><u>Raid Counter</u></h2>
+                <form class="total_raids_form" id="total_raids_form">
+                    <label for="input_raids">Total Raids<br></label>
+                    <input type="number" min="0" id="input_raids" name="input_raids">
+                    <input type="submit" value="Enter">
+                </form>
+                <h2 class="total_raids" id="total_raids"></h2>
+                <div class="buttons" id="buttons">
+                    <btn id="add_btn">+1 Raid</btn>
+                    <btn id="subtract_btn">-1 Raid</btn>
+                    <btn id="clear_btn">Clear Raids</btn>
+                </div>
+                
+            </div>
+        </section>
         <section class="server_list">
             <div class="wrapper">
                 <h2><u>Saved Servers</u></h2>

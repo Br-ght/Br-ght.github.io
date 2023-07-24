@@ -49,6 +49,19 @@ section {
     flex-wrap: wrap;
 }
 
+.raids_section .buttons{
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 10px;
+}
+
+.raids_section btn {
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
 .server_list {
     font-family: "Ubuntu", sans-serif;
 }
